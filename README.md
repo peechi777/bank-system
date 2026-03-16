@@ -59,3 +59,4 @@ Protocol: 遵循 RESTful API 設計規範。
 實作參數化查詢或 SP 以防止 SQL Injection。
 實作資料清洗與轉義機制以防止 XSS 攻擊。
 
+https://github.com/user-attachments/assets/4030b253-b37c-48bf-8716-ec9b45496d48
