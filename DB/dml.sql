@@ -1,3 +1,6 @@
+SET NAMES utf8mb4;
+SET character_set_client = utf8mb4;
+SET character_set_connection = utf8mb4;
 -- user
 INSERT INTO users (user_id, user_name, email, account) 
 VALUES ('A1236456789', '蔡泓其', 'zoe89418@gmail.com', '1111222333');

@@ -31,3 +31,7 @@ CREATE TABLE like_list (
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+CREATE TABLE product (
+    ...
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

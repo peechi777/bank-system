@@ -1,0 +1,34 @@
+services:
+  bank-db:
+    image: mysql:8.0
+    container_name: bank-db
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bank_system
+      PYTHONIOENCODING: utf-8
+    ports:
+      - "8806:3306"
+    volumes:
+      - ./DB:/docker-entrypoint-initdb.d 
+
+  bank-api:
+    build: ./bank-backend
+    container_name: bank-api
+    ports:
+      - "8081:8080"
+    depends_on:
+      - bank-db
+    environment:
+      environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://bank-db:3306/bank_system?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  bank-web:
+    build: ./bank-frontend
+    container_name: bank-web
+    ports:
+      - "5173:5173"  
+    depends_on:
+      - bank-api
