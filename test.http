@@ -1,0 +1,25 @@
+### 1. 測試 R (Read) - 取得所有商品
+GET http://localhost:8081/api/products
+
+### 2. 測試 C (Create) - 新增一筆商品
+POST http://localhost:8081/api/products
+Content-Type: application/json
+
+{
+    "name": "黃金存摺",
+    "category": "理財",
+    "description": "2026 最新投資首選"
+}
+
+### 3. 測試 U (Update) - 修改 ID 為 1 的商品
+PUT http://localhost:8081/api/products/3
+Content-Type: application/json
+
+{
+    "name": "台幣超高利定存",
+    "category": "儲蓄",
+    "description": "限時利率加碼到 3.0%"
+}
+
+### 4. 測試 D (Delete) - 刪除 ID 為 2 的商品
+DELETE http://localhost:8081/api/products/2
