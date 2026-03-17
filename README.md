@@ -22,14 +22,21 @@
     ```bash
     git clone https://github.com/peechi777/bank-system
     cd bank-system
+    
+    ```
+2.  **後端編譯**:
+    ```bash
+    cd bank-backend
+    mvn clean package -DskipTests
+    cd ..
     ```
 
-2.  **一鍵啟動 (包含自動編譯與環境建置)**:
+3.  **一鍵啟動 (包含自動編譯與環境建置)**:
     ```bash
     docker-compose up -d --build
     ```
 
-3.  **訪問服務**:
+2.  **訪問服務**:
     * **前端介面**: `http://localhost:5173`
     * **後端 API**: `http://localhost:8081/api/products`
     * **資料庫埠號**: `8806` (映射至容器內 3306)
