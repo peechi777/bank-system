@@ -19,26 +19,19 @@
 請確保您的電腦已安裝 Docker Desktop。
 
 1.  **複製專案**:
-    ```bash
+    ```powershell
     git clone https://github.com/peechi777/bank-system
     cd bank-system
     
     ```
-2.  **後端編譯**:
-    ```bash
-    cd bank-backend
-    mvn clean package -DskipTests
-    cd ..
-    ```
-
-3.  **一鍵啟動 (包含自動編譯與環境建置)**:
-    ```bash
-    docker-compose up -d --build
+2.  **執行腳本**:
+    ```powershell
+    ./run.ps1
     ```
 
 2.  **訪問服務**:
-    * **前端介面**: `http://localhost:5173`
-    * **後端 API**: `http://localhost:8081/api/products`
+    * **介面**: `http://localhost:5173`
+    * **API**: `http://localhost:8081/api/products`
     * **資料庫埠號**: `8806` (映射至容器內 3306)
 
 --------------------------------------------------------------------
